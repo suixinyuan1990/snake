@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪吃蛇</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <h1 class="brand">SNAKE</h1>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">分数</span>
+          <span class="stat-value" id="score">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">最高</span>
+          <span class="stat-value" id="high-score">0</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="game" width="400" height="400" aria-label="贪吃蛇游戏画布"></canvas>
+      <div class="overlay" id="overlay">
+        <p class="overlay-title" id="overlay-title">准备就绪</p>
+        <p class="overlay-hint" id="overlay-hint">按空格或点击开始</p>
+      </div>
+    </main>
+
+    <footer class="controls">
+      <p class="hint">方向键 / WASD 移动 · 空格暂停</p>
+      <div class="pad" aria-label="触控方向键">
+        <button type="button" class="pad-btn" data-dir="up" aria-label="上">▲</button>
+        <button type="button" class="pad-btn" data-dir="left" aria-label="左">◀</button>
+        <button type="button" class="pad-btn" data-dir="down" aria-label="下">▼</button>
+        <button type="button" class="pad-btn" data-dir="right" aria-label="右">▶</button>
+      </div>
+    </footer>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
